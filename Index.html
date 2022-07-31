@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Css Links, Fonts, Animation, Tools, Library -->
+  <link rel="stylesheet" href="./Css/Style.css">
+  <link rel="stylesheet" href="./Css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <title>Shop Card</title>
+
+</head>
+
+<body>
+  <div class="popup">
+    <div class="offcanvas w-75 offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+      aria-labelledby="offcanvasWithBothOptionsLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Your Cart</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="total text-center mt-4 mb-4">
+          <h3>total price : $<span></span></h3>
+          <div class="pay mt-2">
+            <button>click to pay</button>
+          </div>
+        </div>
+        <div class="row"></div>
+      </div>
+    </div>
+  </div>
+  <div class="preloader">
+    <div class="ts">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="stash mt-5 d-flex w-100 w-md-50 justify-content-between align-items-center">
+      <div class="dark-light-mode">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+          <label class="form-check-label" for="flexSwitchCheckDefault">Light Mode</label>
+        </div>
+      </div>
+
+      <div class="cart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
+        aria-controls="offcanvasWithBothOptions">
+
+        <div class="button icon">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <div class="product_number rounded-pill">
+            <p>0</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="error text-center">
+    <h4></h4>
+  </div>
+
+  <div class="main mt-5">
+    <div class="container">
+      <div class="cards row">
+        <div class="col-12 col-xl-4 col-lg-6 col-md-6 a mt-3">
+          <div class="card">
+            <div class="brand_name">
+              <h3 class="brand_name_1">Nike Zoom KD 12 new gay version</h3>
+            </div>
+            <div class="image">
+              <img
+                src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/387768/01/sv01/fnd/IND/fmt/png/PUMA-x-1DER-Columbus-Men's-Shoes"
+                alt="">
+            </div>
+            <p class="text mt-2 mb-0">colors</p>
+            <div class="info mb-2 d-flex gap-3 flex-row justify-content-between align-items-center">
+              <div class="colors">
+                <ul class="d-flex gap-2 flex-row">
+                  <li class="rounded-pill" data-color="#FFEA11"></li>
+                  <li class="rounded-pill active" data-color="#D61C4E"></li>
+                  <li class="rounded-pill" data-color="#53BF9D"></li>
+                  <li class="rounded-pill" data-color="#151d3b"></li>
+                </ul>
+              </div>
+              <div class="rate">
+                <i class="fa-solid fa-star active-star"></i>
+                <i class="fa-solid fa-star active-star"></i>
+                <i class="fa-solid fa-star active-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <p class="text mb-0">size</p>
+            <div class="info2 mb-3 d-flex flex-row justify-content-between align-items-center">
+              <div class="size">
+                <ul class="d-flex flex-row gap-2">
+                  <li data-size="2">2</li>
+                  <li data-size="4" class="active">4</li>
+                  <li data-size="6">6</li>
+                  <li data-size="8">8</li>
+                </ul>
+              </div>
+              <div class="number">
+                <input type="number" value="1" max="10" min="1" id="number">
+              </div>
+            </div>
+            <div class="add d-flex flex-row justify-content-between gap-2 align-items-center">
+              <button id="add_to_card" data-size="4" data-num="1" data-price="16"><i
+                  class="fa-solid fa-bag-shopping"></i> add to cart</button>
+              <div id="price">
+                <h3>$<span id="rule_price">16.00</span></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-xl-4 col-lg-6 col-md-6 b mt-3">
+          <div class="card">
+            <div class="brand_name">
+              <h3 class="brand_name_1">PUMA Serve Pro Lite Unisex</h3>
+            </div>
+            <div class="image">
+
+              <img
+                src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_750,h_750/global/306557/01/sv01/fnd/IND/fmt/png/Mercedes-Kart-Cat-X-Tech-Unisex-Sneakers"
+                alt="">
+
+            </div>
+            <p class="text mt-2 mb-0">colors</p>
+            <div class="info mb-2 d-flex gap-3 flex-row justify-content-between align-items-center">
+              <div class="colors">
+                <ul class="d-flex gap-2 flex-row">
+                  <li class="rounded-pill" data-color="#FFEA11"></li>
+                  <li class="rounded-pill active" data-color="#D61C4E"></li>
+                  <li class="rounded-pill" data-color="#53BF9D"></li>
+                  <li class="rounded-pill" data-color="#151d3b"></li>
+                </ul>
+              </div>
+              <div class="rate">
+                <i class="fa-solid fa-star active-star"></i>
+                <i class="fa-solid fa-star active-star"></i>
+                <i class="fa-solid fa-star active-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <p class="text mb-0">size</p>
+            <div class="info2 mb-3 d-flex flex-row justify-content-between align-items-center">
+              <div class="size">
+                <ul class="d-flex flex-row gap-2">
+                  <li data-size="2" class="active">2</li>
+                  <li data-size="4">4</li>
+                  <li data-size="6">6</li>
+                  <li data-size="8">8</li>
+                </ul>
+              </div>
+              <div class="number">
+                <input type="number" value="1" max="10" min="1" id="number">
+              </div>
+            </div>
+            <div class="add d-flex flex-row justify-content-between gap-2 align-items-center">
+              <button id="add_to_card" data-size="2" data-num="1" data-price="33"><i
+                  class="fa-solid fa-bag-shopping"></i> add to cart</button>
+              <div id="price">
+                <h3>$<span id="rule_price">33.00</span></h3>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-12 col-xl-4 col-lg-6 col-md-6 c mt-3">
+          <div class="card">
+            <div class="brand_name">
+              <h3 class="brand_name_1">Mirage Mox Brightly Packed</h3>
+            </div>
+            <div class="image">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZS0BiedhVTcjbRt5QTVDl5e7GW392qVM5qA&usqp=CAU"
+                alt="">
+            </div>
+            <p class="text mt-2 mb-0">colors</p>
+            <div class="info mb-2 d-flex gap-3 flex-row justify-content-between align-items-center">
+              <div class="colors">
+                <ul class="d-flex gap-2 flex-row">
+                  <li class="rounded-pill" data-color="#FFEA11"></li>
+                  <li class="rounded-pill active" data-color="#D61C4E"></li>
+                  <li class="rounded-pill" data-color="#53BF9D"></li>
+                  <li class="rounded-pill" data-color="#151d3b"></li>
+                </ul>
+              </div>
+              <div class="rate">
+                <i class="fa-solid fa-star active-star"></i>
+                <i class="fa-solid fa-star active-star"></i>
+                <i class="fa-solid fa-star active-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <p class="text mb-0">size</p>
+            <div class="info2 mb-3 d-flex flex-row justify-content-between align-items-center">
+              <div class="size">
+                <ul class="d-flex flex-row gap-2">
+                  <li data-size="2">2</li>
+                  <li data-size="4">4</li>
+                  <li data-size="6">6</li>
+                  <li data-size="8" class="active">8</li>
+                </ul>
+              </div>
+              <div class="number">
+                <input type="number" value="1" max="10" min="1" id="number">
+              </div>
+            </div>
+            <div class="add d-flex flex-row justify-content-between gap-2 align-items-center">
+              <button id="add_to_card" data-size="8" data-num="1" data-price="84"><i
+                  class="fa-solid fa-bag-shopping"></i> add to
+                cart</button>
+              <div id="price">
+                <h3>$<span id="rule_price">84.00</span></h3>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Js Links, Animation, Tools, Library  -->
+  <script src="./Js/Main.js"></script>
+  <script src="./Js/bootstrap.bundle.min.js"></script>
+  <script src="./Js/all.min.js"></script>
+
+</body>
+
+</html>
